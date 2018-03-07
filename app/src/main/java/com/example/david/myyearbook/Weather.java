@@ -14,5 +14,5 @@ public class Weather extends AppCompatActivity{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.weather);
         }
-        
+
 }
