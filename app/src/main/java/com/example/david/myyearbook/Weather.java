@@ -5,6 +5,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +28,7 @@ public class Weather extends AppCompatActivity {
     StringBuffer response;
     WeatherObject weather;
     ArrayList<WeatherObject> data = new ArrayList<WeatherObject>();
+    Button update;
 
     private String path = "http://api.weatherunlocked.com/api/forecast/40.71,-74.00?app_id=b51fbba4&app_key=7a45bd08651c576aeef6b08b1b2bb5f0";
 
@@ -35,7 +39,18 @@ public class Weather extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weather);
-        new getWeather().execute();
+
+        update = findViewById(R.id.update);
+        update.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                new getWeather().execute();
+                TextView todMin = findViewById(R.id.todMin);
+                todMin.setText(data.get(0).getTempMin());
+            }
+        });
+
+
     }
 
 
