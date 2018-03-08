@@ -1,13 +1,15 @@
 package com.example.david.myyearbook;
 
-public class WeatherObject {
-    private String date;
-    private int tempMax;
-    private int tempMin;
-    private int snow;
-    private String rainPercent;
+import java.util.Date;
 
-    public WeatherObject(String date, int tempMax, int tempMin, int snow, String rainPercent) {
+public class WeatherObject {
+    private Date date;
+    private double tempMax;
+    private double tempMin;
+    private double snow;
+    private int rainPercent;
+
+    public WeatherObject(Date date, double tempMax, double tempMin, double snow, int rainPercent) {
         this.date = date;
         this.tempMax = tempMax;
         this.tempMin = tempMin;
@@ -15,23 +17,23 @@ public class WeatherObject {
         this.rainPercent = rainPercent;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public int getTempMax() {
+    public double getTempMax() {
         return tempMax;
     }
 
-    public int getSnow() {
+    public double getSnow() {
         return snow;
     }
 
-    public String getRainPercent() {
+    public int getRainPercent() {
         return rainPercent;
     }
 
-    public int getTempMin() {
+    public double getTempMin() {
 
         return tempMin;
     }

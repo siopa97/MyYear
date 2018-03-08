@@ -19,6 +19,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -46,7 +47,7 @@ public class Weather extends AppCompatActivity {
             public void onClick(View v){
                 new getWeather().execute();
                 TextView todMin = findViewById(R.id.todMin);
-                todMin.setText(data.get(0).getTempMin());
+                todMin.setText("Fuck You");
             }
         });
 
@@ -96,14 +97,16 @@ public class Weather extends AppCompatActivity {
                 JSONArray jsonarray = new JSONArray(responseText);
                 for (int i = 0; i < jsonarray.length(); i++) {
                     JSONObject jsonobject = jsonarray.getJSONObject(i);
-                    int min = jsonobject.getInt("temp_min_f");
-                    int max = jsonobject.getInt("temp_max_f");
-                    int snow = jsonobject.getInt("snow_total_in");
+                    Date date =(Date) jsonobject.get("date");
+                    double max = jsonobject.getInt("temp_max_f");
+                    Log.d ("Max: ", ""+ max);
+                    double min = jsonobject.getInt("temp_min_f");
+                    Log.d( "Min: ","" + min);
+                    double snow = jsonobject.getInt("snow_total_in");
                     int chance = jsonobject.getInt("prob_precip_pct");
-                    String date = jsonobject.getString("wx_desc");
                     Log.d("Weather Report:", date + " minTemp:" + min + " maxTemp:" +  max +
                     " snowIn:"  + " Chance of Rain:" + chance);
-                    weather = new WeatherObject(date,min,max,snow,chance+"%");
+                    weather = new WeatherObject(date,min,max,snow,chance);
                     data.add(weather);
 
                 }
