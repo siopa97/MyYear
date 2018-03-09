@@ -40,14 +40,15 @@ public class Weather extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weather);
+        new getWeather().execute();
 
         update = findViewById(R.id.update);
         update.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                new getWeather().execute();
+
                 TextView todMin = findViewById(R.id.todMin);
-                todMin.setText("Fuck You");
+                todMin.setText(data.get(0).getTempMin()+"");
             }
         });
 
@@ -94,10 +95,12 @@ public class Weather extends AppCompatActivity {
 
             Log.d("data:", responseText);
             try {
-                JSONArray jsonarray = new JSONArray(responseText);
+                JSONObject obj = new JSONObject(responseText);
+                JSONArray jsonarray = obj.getJSONArray("Days");
+                Log.d( "getWebServiceData: ", jsonarray.length()+"");
                 for (int i = 0; i < jsonarray.length(); i++) {
                     JSONObject jsonobject = jsonarray.getJSONObject(i);
-                    Date date =(Date) jsonobject.get("date");
+                    String date = jsonobject.getString("date");
                     double max = jsonobject.getInt("temp_max_f");
                     Log.d ("Max: ", ""+ max);
                     double min = jsonobject.getInt("temp_min_f");
@@ -105,8 +108,8 @@ public class Weather extends AppCompatActivity {
                     double snow = jsonobject.getInt("snow_total_in");
                     int chance = jsonobject.getInt("prob_precip_pct");
                     Log.d("Weather Report:", date + " minTemp:" + min + " maxTemp:" +  max +
-                    " snowIn:"  + " Chance of Rain:" + chance);
-                    weather = new WeatherObject(date,min,max,snow,chance);
+                    " snowIn:"  + snow + " Chance of Rain: " + chance);
+                    weather = new WeatherObject(min,max,snow,chance);
                     data.add(weather);
 
                 }
