@@ -180,7 +180,7 @@ public class Weather extends AppCompatActivity {
                     int chance = jsonobject.getInt("prob_precip_pct");
                     Log.d("Weather Report:", date + " minTemp:" + min + " maxTemp:" + max +
                             " snowIn:" + snow + " Chance of Rain: " + chance);
-                    weather = new WeatherObject(date, min, max, snow, chance);
+                    weather = new WeatherObject(date, max, min, snow, chance);
                     data.add(weather);
 
                 }

@@ -22,19 +22,19 @@ public class WeatherObject {
     }
 
     public String getTempMax() {
-        return tempMax + "";
+        return tempMax + " °F";
     }
 
     public String getSnow() {
-        return snow + "";
+        return snow + " inches";
     }
 
-    public int getRainPercent() {
-        return rainPercent;
+    public String getRainPercent() {
+        return rainPercent + "%";
     }
 
     public String getTempMin() {
 
-        return tempMin + "";
+        return tempMin + " °F";
     }
 }
