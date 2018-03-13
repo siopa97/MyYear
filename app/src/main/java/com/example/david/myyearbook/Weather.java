@@ -34,7 +34,7 @@ public class Weather extends AppCompatActivity {
     WeatherList data = new WeatherList();
     Button update;
 
-    private String path = "http://api.weatherunlocked.com/api/forecast/40.71,74.00?app_id=b51fbba4&app_key=7a45bd08651c576aeef6b08b1b2bb5f0";
+    private String path = "http://api.weatherunlocked.com/api/forecast/us.11720?app_id=b51fbba4&app_key=7a45bd08651c576aeef6b08b1b2bb5f0";
 
     public Weather() throws MalformedURLException {
     }
