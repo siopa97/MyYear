@@ -1,52 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.david.myyearbook.Weather">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/background">
+        android:background="@color/background"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Weather"
-            android:textSize="45sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:background="@color/background"/>
+            android:orientation="horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@color/background"
-            android:text="Push to Refresh"
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/update"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/background"
+                android:gravity="center"
+                android:text="Weather"
+                android:textColor="@color/colorPrimary"
+                android:textSize="45sp" />
 
-    </LinearLayout>
+
+        </LinearLayout>
 
         <TextView
+            android:id="@+id/remove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:height="900dp"
-            android:id="@+id/remove"
-            />
+            android:height="0dp" />
 
         <TextView
             android:id="@+id/date1"
@@ -63,34 +52,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Min Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/minTemp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Max Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/maxTemp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -103,34 +92,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Chance of Rain:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/chanceofRain1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Inches:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/snow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -149,34 +122,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Min Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/minTemp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Max Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/maxTemp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -189,34 +162,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Chance of Rain:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/chanceofRain2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Inches:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/snow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
 
@@ -235,34 +193,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Min Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/minTemp3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Max Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/maxTemp3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -275,34 +233,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Chance of Rain:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/chanceofRain3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Inches:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/snow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
 
@@ -321,34 +264,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Min Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/minTemp4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Max Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/maxTemp4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -361,34 +304,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Chance of Rain:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/chanceofRain4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Inches:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/snow4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
 
@@ -407,34 +335,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Min Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/minTemp5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Max Temp:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/maxTemp5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -447,40 +375,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:text="Chance of Rain:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/chanceofRain5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
+                android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snow Inches:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/snow5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
 
         </LinearLayout>
 
 
     </LinearLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
